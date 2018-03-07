@@ -1,0 +1,138 @@
+.video-container#header
+  video(autoplay=true, height="720", loop=true, poster="static/img/wine.jpg", width="1280")
+    source(src="static/video/mp4/wine.mp4" type="video/mp4")
+    source(src="static/video/webm/wine.webm" type="video/webm")
+  .row.full-height.middle-xs.center-xs.relative.up#home
+    .col-xs-12
+      .box.white-text
+        img(src="src/assets/img/logo.png" width="200")
+        h1.satisfy.title.no-margin Alquileres y Eventos
+        p#is-open
+          i.fa.fa-clock-o Abierto Ahora
+    nav.fixed.top.right.navigation.white-text#navigation
+      ul.list-inline
+        li.list-inline-item
+          a(href="#header") Inicio
+        li.list-inline-item
+          a(href="#menu") Servicios
+        li.list-inline-item
+          a(href="#gallery") Galeria
+        li.list-inline-item
+          a(href="#contact-form") Contacto
+        li.list-inline-item
+          a(href="#location") Como llegar
+    .absolute.black.large-padding.white-text.full-width#description
+      .row.middle-xs.center-xs
+        .col-xs-7.col-sm-6.white-text.medium El servicio con la mejor calidad...
+        .col-xs.hidden#sticky-navigation
+          .box
+            nav.text-right.navigation
+              ul.list-inline
+                li.list-inline-item
+                  a(href="#header") Inicio
+                li.list-inline-item
+                  a(href="#menu") Servicios
+                li.list-inline-item
+                  a(href="#gallery") Galeria
+                li.list-inline-item
+                  a(href="#contact-form") Contacto
+                li.list-inline-item
+                  a(href="#location") Como llegar
+  .text-center.relative#menu
+    .absolute.white#menu-title
+      h2.satisfy.title#service  Servicios
+    .row
+      .col-md-4.col-lg-3.col-sm-6.col-xs-12.services(style="background-image:url(static/img/servicios/sillas-thumb.jpg);")
+        .screen
+          .row.middle-xs.full-height
+            .col-xs-12.white-text
+              h3.satisfy.subtitle Alquiler de Sillas
+              p.no-margin 10.00 NIO
+      .col-md-4.col-lg-3.col-sm-6.col-xs-12.services(style="background-image:url(img/servicios/bodas-thumb.jpg);")
+        .screen
+          .row.middle-xs.full-height
+            .col-xs-12.white-text
+              h3.satisfy.subtitle Organizacion de bodas
+              p.no-margin 100.00 NIO
+      .col-md-4.col-lg-3.col-sm-6.col-xs-12.services(style="background-image:url(static/img/servicios/mesas-thumb.jpg);")
+        .screen
+          .row.middle-xs.full-height
+            .col-xs-12.white-text
+              h3.satisfy.subtitle Alquiler de Mesas
+              p.no-margin 15.00 NIO
+      .col-md-4.col-lg-3.col-sm-6.col-xs-12.services(style="background-image:url(static/img/servicios/quinceaños-thumb.jpg);")
+        .screen
+          .row.middle-xs.full-height
+            .col-xs-12.white-text
+              h3.satisfy.subtitle Organizacion de quinceaños
+              p.no-margin 100.00 NIO
+      .col-md-4.col-lg-3.col-sm-6.col-xs-12.services(style="background-image:url(static/img/servicios/manteles-thumb.jpg);")
+        .screen
+          .row.middle-xs.full-height
+            .col-xs-12.white-text
+              h3.satisfy.subtitle Alquiler de Manteles
+              p.no-margin 5.00 NIO
+      .col-md-4.col-lg-3.col-sm-6.col-xs-12.services(style="background-image:url(static/img/servicios/babyshower-thumb.jpg);")
+        .screen
+          .row.middle-xs.full-height
+            .col-xs-12.white-text
+              h3.satisfy.subtitle Organizacion de Baby-Shower
+              p.no-margin 150.00 NIO
+      .col-md-4.col-lg-3.col-sm-6.col-xs-12.services(style="background-image:url(static/img/servicios/buffet-thumb.jpg);")
+        .screen
+          .row.middle-xs.full-height
+            .col-xs-12.white-text
+              h3.satisfy.subtitle Buffet
+              p.no-margin 170.00 NIO
+      .col-md-4.col-lg-3.col-sm-6.col-xs-12.services(style="background-image:url(static/img/servicios/utensilios-thumb.jpg);")
+        .screen
+          .row.middle-xs.full-height
+            .col-xs-12.white-text
+              h3.satisfy.subtitle Alquiler de Utensilios
+              p.no-margin 30.00 NIO
+  #gallery
+    .inner
+      .image(style="background-image:url(img/bodas.jpg);")
+      .image(style="background-image:url(img/babyshower.jpg);")
+      .image(style="background-image:url(img/buffet.jpg);")
+      .image(style="background-image:url(img/manteles.jpg);")
+      .image(style="background-image:url(img/mesas.jpg);")
+      .image(style="background-image:url(img/sillas.jpg);")
+      .image(style="background-image:url(img/utensilios.jpg);")
+      .image(style="background-image:url(img/quinceaños.jpg);")
+  .container
+    .card.white.black-text.text-center.relative
+      h3.medium.slim En <strong class="satisfy medium"> Alquileres y Eventos</strong> el cliente no es una opinion, es una ley
+      p.top-space Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        |         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        |         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        |         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        |         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        |         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        strong.satisfy - CEO
+  .black.white-text.full-height#contact-form
+    .row.middle-xs.full-height
+      .col-xs-12
+        .box
+          p.text-center.medium#info-contacto Presiona enter luego de rellenar los campos para enviar tu mensaje.
+          form(action="https://formspree.io/trihexa_romero@hotmail.com", method="POST").step-form#form-contact
+            .row.center-xs
+              .col-xs-2.col-md-1.text-center
+                .box
+                  .path-step.active
+                  br
+                  .path-step.active
+                  br
+                  .path-step.active
+                  br
+              .col-xs-5
+                .box
+                  fieldset.step.active
+                    input.input(name="email", placeholder="Coloca tu e-mail", required=true, type="email")
+                  fieldset.step
+                    input.input(name="username", placeholder="Coloca tu nombre", required=true, type="text")
+                  fieldset.step
+                    textarea.input(name="texto", placeholder="Escribe aqui tu mensaje." required=true)
+  #location
+    #map
+      .black.large-padding.white-text.text-center.medium#mensaje

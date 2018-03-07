@@ -17,7 +17,7 @@ const createLintingRule = () => ({
     formatter: require('eslint-friendly-formatter'),
     emitWarning: !config.dev.showEslintErrorsInOverlay
   }
-})
+});
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
@@ -36,6 +36,8 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      'jQuery': resolve('node_modules/jquery/dist/jquery'),
+      '$': resolve('node_modules/jquery/dist/jquery'),
     }
   },
   module: {
