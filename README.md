@@ -1,6 +1,17 @@
-# vue-example
+# Rentals
 
-> A Vue.js project
+> A Vue.js component that include a Landing page for a project oriented
+to rentals and organization companies.
+
+## Utils
+> Bootstrap-vue@2.0.1
+  Install using npm install bootstrap-vue
+
+> Jquery@3.3.1
+  Install using npm install jquery
+  This package has extra configuration that you can look in eslint
+  config file, webpack.dev.config and webpack.base.config.
+
 
 ## Build Setup
 
