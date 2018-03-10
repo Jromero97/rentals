@@ -3,15 +3,10 @@
     video(autoplay=true, height="720", loop=true, poster="static/img/wine.jpg", width="1280")
       source(src="static/video/mp4/wine.mp4" type="video/mp4")
       source(src="static/video/webm/wine.webm" type="video/webm")
-    .row.full-height.relative.up#home
+  .container-fluid.no-padding.no-margin.relative.h-100#home
+    nav.fixed.top.right.navigation.white-text.row.full-width.up#navigation
       .col-12
-        .white-text
-          img(src="static/img/logo.png" width="200")
-          h1.satisfy.title.no-margin Alquileres y Eventos
-          p#is-open
-            i.fa.fa-clock-o Abierto Ahora
-      nav.fixed.top.right.navigation.white-text#navigation
-        ul.list-inline
+        ul.list-inline.float-right
           li.list-inline-item
             a(href="#header") Inicio
           li.list-inline-item
@@ -22,23 +17,31 @@
             a(href="#contact-form") Contacto
           li.list-inline-item
             a(href="#location") Como llegar
-      .absolute.black.large-padding.white-text.full-width#description
-        .row.middle-xs.center-xs
-          .col-xs-7.col-sm-6.white-text.medium El servicio con la mejor calidad...
-          .col-xs.hidden#sticky-navigation
-            .box
-              nav.text-right.navigation
-                ul.list-inline
-                  li.list-inline-item
-                    a(href="#header") Inicio
-                  li.list-inline-item
-                    a(href="#menu") Servicios
-                  li.list-inline-item
-                    a(href="#gallery") Galeria
-                  li.list-inline-item
-                    a(href="#contact-form") Contacto
-                  li.list-inline-item
-                    a(href="#location") Como llegar
+    .row.no-padding.h-100
+      .white-text.col-12.h-100.no-padding.text-center#parent
+        .h-100#child
+          img(src="static/img/logo.png" width="200")
+          h1.satisfy.title.no-margin Alquileres y Eventos
+          p#is-open
+            i.fa.fa-clock-o Abierto Ahora
+
+    .black.large-padding.white-text.full-width.absolute.up#description
+      .row.middle-xs.center-xs
+        .col-xs-7.col-sm-6.white-text.medium El servicio con la mejor calidad...
+        .col-xs.hidden#sticky-navigation
+          .box
+            nav.text-right.navigation
+              ul.list-inline
+                li.list-inline-item
+                  a(href="#header") Inicio
+                li.list-inline-item
+                  a(href="#menu") Servicios
+                li.list-inline-item
+                  a(href="#gallery") Galeria
+                li.list-inline-item
+                  a(href="#contact-form") Contacto
+                li.list-inline-item
+                  a(href="#location") Como llegar
   .text-center.relative#menu
     .absolute.white#menu-title
       h2.satisfy.title#service  Servicios
