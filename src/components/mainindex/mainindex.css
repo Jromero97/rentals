@@ -397,3 +397,15 @@ textarea {
 
 
 /*End Helper Classes*/
+
+/*Map Styles*/
+
+#location {
+  height: 600px;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+
+/*End Map Styles*/

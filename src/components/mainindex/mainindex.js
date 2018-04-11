@@ -1,10 +1,17 @@
+import Media from './media'
+
 export default {
   name: 'HelloWorld',
   data() {
     return {
       msg: 'Vue tutorial!',
       slide: 0,
-      sliding: null
+      sliding: null,
+      center: {lat: 12.122527, lng: -86.237792},
+      markers: [{
+        position: {lat: 12.122527, lng: -86.237792}
+      }, ],
+      Media
     };
   },
   methods: {
@@ -13,12 +20,16 @@ export default {
     },
     onSlideEnd(slide) {
       this.sliding = false
+    },
+    showModal () {
+      this.$root.$emit('bv::show::modal', 'modal1')
+    },
+    hideModal () {
+      this.$root.$emit('bv::hide::modal', 'modal1')
     }
   },
   mounted() {
     let sticky = false; // Declare this variable when is not down.
-    // let currentPosition = 0; // Current position slider
-    // let imageCounter = $('[data-name="image-counter"]').attr('content'); // Quantity of images to slide
     const email = 'j.romeroc97@gmail.com';
     const descriptionDiv = $('#description');
 
@@ -36,13 +47,13 @@ export default {
       $('#sticky-navigation').slideUp('fast');
     }
 
-    function sendForm(){
+    function sendForm() {
       $.ajax({
         url: $form.attr('action'),
         method: 'POST',
         data: $form.formObject(),
         dataType: 'json',
-        success:  () => {
+        success: () => {
           alert('Everything Ok!');
         }
       });
@@ -61,18 +72,6 @@ export default {
     });
 
     /* Define time interval */
-    // setInterval(()=>{
-    //   // If current position is less than image counter, increment current position.
-    //   if(currentPosition < imageCounter){
-    //     currentPosition++;
-    //   } else {
-    //     currentPosition = 0; // Restart current position.
-    //   }
-    //   // Set current position to next image in slide.
-    //   $('#gallery .inner').css({
-    //     left: '-'+currentPosition*100+'%',
-    //   });
-    // }, 2000);
 
     $(window).scroll(()=>{
       const inBottom = isInBottom();
@@ -88,6 +87,14 @@ export default {
       }
     });
 
+    // Call to modal bootstrap
 
+    $('#alquiler-sillas').on('click', ()=>{
+      this.$root.$emit('bv::show::modal', 'modal1')
+    });
+
+    $('#bodas').on('click', ()=>{
+      this.$root.$emit('bv::show::modal', 'modal2')
+    });
   }
 };
