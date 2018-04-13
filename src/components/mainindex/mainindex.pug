@@ -47,46 +47,11 @@
     .absolute.white#menu-title
       h2.satisfy.title#service  Servicios
     .row
-      .col-3.services(style="background-image:url(static/img/servicios/sillas-thumb.jpg);")
+      .col-3.services(v-for="media in Media" :key="media.id" v-bind:style="{ 'background-image': 'url(' + media.images[0].url + ')' }")
         .screen
           .row.full-height.t-div
             .col-12.white-text.t-child
-              h3#alquiler-sillas.satisfy.subtitle Alquiler de Sillas
-      .col-3.services(style="background-image:url(static/img/servicios/bodas-thumb.jpg);")
-        .screen
-          .row.full-height.t-div
-            .col-12.white-text.t-child
-              h3.satisfy.subtitle#bodas Organizacion de bodas
-      .col-3.services(style="background-image:url(static/img/servicios/mesas-thumb.jpg);")
-        .screen#alquiler-mesas
-          .row.full-height.t-div
-            .col-12.white-text.t-child
-              h3.satisfy.subtitle Alquiler de Mesas
-      .col-3.services(style="background-image:url(static/img/servicios/quinceaños-thumb.jpg);")
-        .screen#quinceanhos
-          .row.full-height.t-div
-            .col-12.white-text.t-child
-              h3.satisfy.subtitle Organizacion de quinceaños
-      .col-3.services(style="background-image:url(static/img/servicios/manteles-thumb.jpg);")
-        .screen#alquiler-manteles
-          .row.full-height.t-div
-            .col-12.white-text.t-child
-              h3.satisfy.subtitle Alquiler de Manteles
-      .col-3.services(style="background-image:url(static/img/servicios/babyshower-thumb.jpg);")
-        .screen#baby-shower
-          .row.full-height.t-div
-            .col-12.white-text.t-child
-              h3.satisfy.subtitle Organizacion de Baby-Shower
-      .col-3.services(style="background-image:url(static/img/servicios/buffet-thumb.jpg);")
-        .screen#buffet
-          .row.full-height.t-div.full-width
-            .col-12.white-text.t-child.text-center
-              h3.satisfy.subtitle Buffet
-      .col-3.services(style="background-image:url(static/img/servicios/utensilios-thumb.jpg);")
-        .screen#alquiler-utensilios
-          .row.full-height.t-div
-            .col-12.white-text.t-child
-              h3.satisfy.subtitle Alquiler de Utensilios
+              h3#alquiler-sillas.satisfy.subtitle {{ media.name }}
   b-modal#modal1(href="modal1")
     b-carousel#gallery-service-1(controls=true, background="#ababab", :interval="2000", v-model="slide", @sliding-start="onSlideStart", @sliding-end="onSlideEnd", img-width="1024", img-height="480")
       b-carousel-slide(img-src="")
@@ -122,8 +87,8 @@
       b-carousel-slide(img-src="static/img/8/Buffet.jpg")
   // Slide for show a preview of services.
   #gallery
-    b-carousel#gallery-carousel( controls=true, background="#ababab", :interval="5000", sv-model="slide", @sliding-start="onSlideStart", @sliding-end="onSlideEnd", img-width="1024", img-height="480")
-      b-carousel-slide(v-for="media in Media" :key= "media.id" img-src="media.images[0].url")
+    b-carousel#gallery-carousel( controls=true, background="#ababab", :interval="2000", sv-model="slide", @sliding-start="onSlideStart", @sliding-end="onSlideEnd", img-width="1024", img-height="480")
+      b-carousel-slide(v-for="media in Media" :key= "media.id" :img-src="media.images[0].url")
   // Card with lorem ipsum for a brief description of slogan or mision and vision of company.
   .container
     .card.white.black-text.text-center.relative
