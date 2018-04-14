@@ -22,10 +22,10 @@ export default {
       this.sliding = false
     },
     showModal () {
-      this.$root.$emit('bv::show::modal', 'modal1')
+      this.$root.$emit('bv::show::modal', '')
     },
     hideModal () {
-      this.$root.$emit('bv::hide::modal', 'modal1')
+      this.$root.$emit('bv::hide::modal', '')
     }
   },
   mounted() {
